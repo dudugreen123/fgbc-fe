@@ -1,9 +1,14 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
 import * as S from './style';
 
 export default function Footer() {
-    const currentYear = new Date().getFullYear();
+    const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
+
+    useEffect(() => {
+        setCurrentYear(new Date().getFullYear());
+    }, []);
 
     return (
         <S.FooterWrapper>

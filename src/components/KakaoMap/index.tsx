@@ -6,6 +6,7 @@ const KakaoMap = () => {
         <html>
         <head>
             <meta charset="utf-8">
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
             <style>
                 body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
                 .root_daum_roughmap { width: 100% !important; height: 100% !important; }
