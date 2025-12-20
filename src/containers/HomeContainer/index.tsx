@@ -164,7 +164,57 @@ export default function HomeContainer() {
                 </S.WorshipGrid>
             </S.WorshipSection>
 
-            {/* 7. 교회 기본 정보 */}
+            {/* 7. 퀵 링크 섹션 */}
+            <S.QuickLinksSection>
+                <S.QuickLinksGrid>
+                    <S.QuickLinkCard>
+                        <S.CardHeader>
+                            <S.CardTitle>주일 설교</S.CardTitle>
+                            <S.CardDesc>주일설교로 한 주간의 삶에 힘을 얻으시기 바랍니다.</S.CardDesc>
+                        </S.CardHeader>
+                        <S.CardLinks>
+                            <a href="https://www.youtube.com/@%EC%88%9C%EB%B3%B5%EC%9D%8C%EB%B2%94%EC%B2%9C%EA%B5%90%ED%9A%8C" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                                <S.MainActionLink>설교 영상 바로 가기</S.MainActionLink>
+                            </a>
+                            <Link href="/intro?tab=greeting" style={{ textDecoration: 'none' }}>
+                                <S.SubActionLink>교회소개</S.SubActionLink>
+                            </Link>
+                        </S.CardLinks>
+                    </S.QuickLinkCard>
+
+                    <S.QuickLinkCard>
+                        <S.CardHeader>
+                            <S.CardTitle>예배 안내</S.CardTitle>
+                            <S.CardDesc>주일예배와 주중예배 모임 안내입니다.</S.CardDesc>
+                        </S.CardHeader>
+                        <S.CardLinks>
+                            <Link href="/intro?tab=worship" style={{ textDecoration: 'none' }}>
+                                <S.MainActionLink>예배 시간 안내 바로 가기</S.MainActionLink>
+                            </Link>
+                            <Link href="/intro?tab=worship" style={{ textDecoration: 'none' }}>
+                                <S.SubActionLink>헌금 안내</S.SubActionLink>
+                            </Link>
+                        </S.CardLinks>
+                    </S.QuickLinkCard>
+
+                    <S.QuickLinkCard>
+                        <S.CardHeader>
+                            <S.CardTitle>새가족안내</S.CardTitle>
+                            <S.CardDesc>순복음범천교회에 오신 여러분을 환영합니다.</S.CardDesc>
+                        </S.CardHeader>
+                        <S.CardLinks>
+                            <Link href="/newcomer?tab=registration" style={{ textDecoration: 'none' }}>
+                                <S.MainActionLink>등록 및 교육 안내 바로 가기</S.MainActionLink>
+                            </Link>
+                            <Link href="/newcomer?tab=location" style={{ textDecoration: 'none' }}>
+                                <S.SubActionLink>오시는 길</S.SubActionLink>
+                            </Link>
+                        </S.CardLinks>
+                    </S.QuickLinkCard>
+                </S.QuickLinksGrid>
+            </S.QuickLinksSection>
+
+            {/* 8. 교회 기본 정보 */}
             <S.InfoSection>
                 <S.InfoContainer>
                     <S.InfoLeft>

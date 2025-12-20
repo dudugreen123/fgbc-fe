@@ -650,3 +650,116 @@ export const InfoContent = styled.div`
     flex-direction: column;
     gap: 2px;
 `;
+
+// 8. 퀵 링크 섹션 (미니멀리즘 디자인)
+export const QuickLinksSection = styled.section`
+    padding: 80px 20px;
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: 40px 20px;
+    }
+`;
+
+export const QuickLinksGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @media (max-width: 1024px) {
+        gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+`;
+
+export const QuickLinkCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: #e0e0e0;
+        background: #fafafa;
+    }
+`;
+
+export const CardHeader = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+`;
+
+export const CardTitle = styled.h3`
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    letter-spacing: -0.01em;
+`;
+
+export const CardDesc = styled.p`
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.5;
+    word-break: keep-all;
+`;
+
+export const CardLinks = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+`;
+
+export const MainActionLink = styled.div`
+    display: inline-flex;
+    align-items: center;
+    color: #2c2c2c;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &::after {
+        content: ' →';
+        margin-left: 4px;
+        transition: transform 0.2s ease;
+    }
+
+    &:hover {
+        opacity: 0.7;
+        &::after {
+            transform: translateX(4px);
+        }
+    }
+`;
+
+export const SubActionLink = styled.div`
+    display: inline-flex;
+    align-items: center;
+    color: #999;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &::after {
+        content: ' ↗';
+        margin-left: 2px;
+        font-size: 0.8rem;
+    }
+
+    &:hover {
+        color: #666;
+    }
+`;
