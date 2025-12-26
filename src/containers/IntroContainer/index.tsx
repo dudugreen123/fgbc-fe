@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { MdContentCopy } from 'react-icons/md';
+import Image from 'next/image';
 import * as S from './style';
 
 const IntroContainer = () => {
@@ -109,7 +110,14 @@ const IntroContainer = () => {
 
                         <S.PastorSection>
                             <S.PastorImageWrapper>
-                                <S.PastorImage src="/pastor_lee.png" alt="이효훈 목사" />
+                                <Image
+                                    src="/pastor_lee.png"
+                                    alt="이효훈 담임목사님 사진"
+                                    width={300}
+                                    height={400}
+                                    style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+                                    priority
+                                />
                             </S.PastorImageWrapper>
                             <S.PastorInfo>
                                 <S.PastorTitle>이효훈 담임목사</S.PastorTitle>

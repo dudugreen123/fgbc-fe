@@ -3,6 +3,7 @@
 import * as S from './style';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaYoutube, FaMapMarkerAlt, FaPhone, FaFax } from 'react-icons/fa';
 
 const fadeInUp = {
@@ -84,7 +85,14 @@ export default function HomeContainer() {
                         </S.NewsButton>
                     </S.NewsCard>
                     <S.NewsImageCard>
-                        <S.NewsImage src="/bg.jpeg" alt="교회 소식" />
+                        <Image
+                            src="/bg.jpeg"
+                            alt="순복음범천교회 교회 내부 모습"
+                            width={600}
+                            height={350}
+                            style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+                            priority
+                        />
                     </S.NewsImageCard>
                 </S.NewsGrid>
             </S.NewsSection>

@@ -94,7 +94,7 @@ export default function Footer() {
                         <h2>순복음범천교회</h2>
                         <p>
                             부산광역시 부산진구 엄광로 359<br />
-                            Tel: 051) 634-9362
+                            Tel: <a href="tel:051-634-9362" style={{ color: 'inherit' }}>051) 634-9362</a>
                         </p>
                         <S.Copyright>
                             © {currentYear} Full Gospel Beomcheon Church. All rights reserved.

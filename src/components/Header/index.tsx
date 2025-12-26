@@ -85,14 +85,19 @@ const Header = () => {
                     </S.NavItem>
                 </S.Nav>
 
-                <S.MobileMenuButton onClick={toggleMobileMenu}>
+                <S.MobileMenuButton
+                    onClick={toggleMobileMenu}
+                    aria-label={isMobileMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
+                    aria-expanded={isMobileMenuOpen}
+                    aria-controls="mobile-menu"
+                >
                     {isMobileMenuOpen ? (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M18 6L6 18" stroke="#2c2c2c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M6 6L18 18" stroke="#2c2c2c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     ) : (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M3 12H21" stroke="#2c2c2c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M3 6H21" stroke="#2c2c2c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M3 18H21" stroke="#2c2c2c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -100,7 +105,13 @@ const Header = () => {
                     )}
                 </S.MobileMenuButton>
 
-                <S.MobileMenuOverlay $isOpen={isMobileMenuOpen}>
+                <S.MobileMenuOverlay
+                    $isOpen={isMobileMenuOpen}
+                    id="mobile-menu"
+                    role="navigation"
+                    aria-label="모바일 메뉴"
+                    aria-hidden={!isMobileMenuOpen}
+                >
                     <S.MobileNav>
                         <S.MobileNavItem>
                             <S.MobileNavLink>교회를 소개합니다</S.MobileNavLink>
