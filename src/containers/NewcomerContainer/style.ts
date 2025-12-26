@@ -135,15 +135,13 @@ export const StepsContainer = styled.div`
 export const StepCard = styled.div`
     padding: 24px 32px;
     background: #fafafa;
-    border-radius: 8px;
-    border-left: 3px solid #666;
+    border-radius: 12px;
     border: 1px solid #eee;
-    border-left: 3px solid #666;
     transition: all 0.2s ease;
 
     &:hover {
-        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        border-left-color: #444;
+        background: #f5f5f5;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     }
 
     @media (max-width: 768px) {
