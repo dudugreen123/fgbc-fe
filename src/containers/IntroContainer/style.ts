@@ -274,6 +274,12 @@ export const PastorImageWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     flex-shrink: 0;
+    width: 420px;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        max-width: 380px;
+    }
 `;
 
 export const PastorInfo = styled.div`

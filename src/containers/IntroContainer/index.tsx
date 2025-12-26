@@ -113,8 +113,9 @@ const IntroContainer = () => {
                                 <Image
                                     src="/pastor_lee.png"
                                     alt="이효훈 담임목사님 사진"
-                                    width={300}
-                                    height={400}
+                                    width={420}
+                                    height={560}
+                                    quality={75}
                                     style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                                     priority
                                 />
